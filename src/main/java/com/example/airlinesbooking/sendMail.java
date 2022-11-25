@@ -51,7 +51,7 @@ public class sendMail{
         } catch (Exception e) {
             // logger.error(e.getMessage());
             Alert alert = new Alert(Alert.AlertType.ERROR);
-            alert.setContentText("Turn on your Internet to get emails");
+            alert.setContentText("Failed to send email check your internet connection");
             alert.show();
         }
     }
