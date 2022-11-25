@@ -162,8 +162,8 @@ public class cancelFlightController {
                             pstmtGetMail.setString(1,user_name);
                             ResultSet resultSet1 = pstmtGetMail.executeQuery();
                             resultSet1.next();
-//                            String msg = "Your Booking id "+booking_id+" has been cancelled successfully and refund of "+main_amount+ " will be credited soon";
-//                            sendMail.send_Mail(resultSet1.getString("user_email"),msg);
+                            String msg = "Your Booking id "+booking_id+" has been cancelled successfully and refund of "+main_amount+ " will be credited soon";
+                            sendMail.send_Mail(resultSet1.getString("user_email"),msg);
                         }
 
                     }else {

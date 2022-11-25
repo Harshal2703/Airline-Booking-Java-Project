@@ -142,8 +142,8 @@ public class paymentLayoutController implements Initializable {
             pstmtGetMail.setString(1,UserName);
             ResultSet resultSet1 = pstmtGetMail.executeQuery();
             resultSet1.next();
-//            String msg = "Dear "+ resultSet1.getString("user_full_name") +" your airline ticket is booked and confirmed.Show this email to validate your ticket.Thank you for choosing us ! your transaction id is "+id +" and your booking id is "+getMeMyLatestBookingId();
-//            sendMail.send_Mail(resultSet1.getString("user_email"),msg);
+            String msg = "Dear "+ resultSet1.getString("user_full_name") +" your airline ticket is booked and confirmed.Show this email to validate your ticket.Thank you for choosing us ! your transaction id is "+id +" and your booking id is "+getMeMyLatestBookingId();
+            sendMail.send_Mail(resultSet1.getString("user_email"),msg);
             Alert alert = new Alert(Alert.AlertType.INFORMATION);
             alert.setContentText("Payment Done Successfully");
             alert.show();
@@ -214,8 +214,8 @@ public class paymentLayoutController implements Initializable {
                 pstmtGetMail.setString(1,UserName);
                 ResultSet resultSet1 = pstmtGetMail.executeQuery();
                 resultSet1.next();
-//                String msg = "Dear "+ resultSet1.getString("user_full_name") +" your airline ticket is booked and confirmed.Show this email to validate your ticket.Thank you for choosing us ! your transaction id is "+id +" and your booking id is "+getMeMyLatestBookingId();
-//                sendMail.send_Mail(resultSet1.getString("user_email"),msg);
+                String msg = "Dear "+ resultSet1.getString("user_full_name") +" your airline ticket is booked and confirmed.Show this email to validate your ticket.Thank you for choosing us ! your transaction id is "+id +" and your booking id is "+getMeMyLatestBookingId();
+                sendMail.send_Mail(resultSet1.getString("user_email"),msg);
                 Alert alert = new Alert(Alert.AlertType.INFORMATION);
                 alert.setContentText("Payment Done Successfully");
                 alert.show();
