@@ -149,9 +149,7 @@ public class cancelFlightController {
                         }else {
                            String transactionId = resultSet.getString("transaction_id");
                            paymentDetails pd = getPaymentDetails(transactionId);
-                            Alert alert = new Alert(Alert.AlertType.INFORMATION);
-                            alert.setContentText("Your flight cancelled successfully and amount will be refunded shortly");
-                            alert.show();
+
                             query = "delete from userbookingdata where booking_id = ?";
                             PreparedStatement pstmtDeleteBookingDetailFromDatabase = con.prepareStatement(query);
                             pstmtDeleteBookingDetailFromDatabase.setInt(1,booking_id);
@@ -164,6 +162,9 @@ public class cancelFlightController {
                             resultSet1.next();
                             String msg = "Your Booking id "+booking_id+" has been cancelled successfully and refund of "+main_amount+ " will be credited soon";
                             sendMail.send_Mail(resultSet1.getString("user_email"),msg);
+                            Alert alert = new Alert(Alert.AlertType.INFORMATION);
+                            alert.setContentText("Your flight cancelled successfully and amount will be refunded shortly");
+                            alert.show();
                         }
 
                     }else {

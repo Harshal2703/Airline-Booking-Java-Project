@@ -92,7 +92,7 @@
                   <Font name="System Bold" size="15.0" />
                </font>
             </Button>
-            <Button fx:id="login_forgotPasswordBtn" layoutX="234.0" layoutY="427.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="160.0" style="-fx-background-color: none; -fx-cursor: hand;" text="Forgot Password ?" underline="true">
+            <Button fx:id="login_forgotPasswordBtn" layoutX="234.0" layoutY="427.0" mnemonicParsing="false" onAction="#changeSceneToForgotPassword" prefHeight="30.0" prefWidth="160.0" style="-fx-background-color: none; -fx-cursor: hand;" text="Forgot Password ?" underline="true">
                <font>
                   <Font name="System Bold" size="14.0" />
                </font>

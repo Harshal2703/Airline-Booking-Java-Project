@@ -54,4 +54,8 @@ public class loginController implements Initializable {
             }
         });
     }
+    public void changeSceneToForgotPassword(ActionEvent event) throws IOException {
+        DataBaseConnection.changeScene(event , "forgotPassword.fxml" , "Forgot Password" , null);
+
+    }
 }

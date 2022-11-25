@@ -47,6 +47,9 @@ public class sendMail{
             msg.setSubject("BookmyFlight Confirmation: Ticket Booked");
             msg.setText(msgBody);
             Transport.send(msg);
+            Alert alert = new Alert(Alert.AlertType.INFORMATION);
+            alert.setContentText("Email sent successfully");
+            alert.show();
             //logger.error("Email sent successfully...");
         } catch (Exception e) {
             // logger.error(e.getMessage());
