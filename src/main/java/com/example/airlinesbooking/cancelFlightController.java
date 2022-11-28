@@ -161,7 +161,7 @@ public class cancelFlightController {
                             ResultSet resultSet1 = pstmtGetMail.executeQuery();
                             resultSet1.next();
                             String msg = "Your Booking id "+booking_id+" has been cancelled successfully and refund of "+main_amount+ " will be credited soon";
-                            sendMail.send_Mail(resultSet1.getString("user_email"),msg);
+                            sendMail.send_Mail(resultSet1.getString("user_email"),msg , "BookMyFlight : Flight Canceled Successfully");
                             Alert alert = new Alert(Alert.AlertType.INFORMATION);
                             alert.setContentText("Your flight cancelled successfully and amount will be refunded shortly");
                             alert.show();

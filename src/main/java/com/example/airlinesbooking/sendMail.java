@@ -9,7 +9,7 @@ import javax.mail.internet.InternetAddress;
 import javax.mail.internet.MimeMessage;
 
 public class sendMail{
-    public static void send_Mail(String To, String msgg) {
+    public static void send_Mail(String To, String msgg , String subMsg) {
         // Recipient's email ID needs to be mentioned.
         String to = To;//ye change hoga acc to user who is logged in
 
@@ -44,7 +44,8 @@ public class sendMail{
             msg.setFrom(new InternetAddress(from));
             msg.addRecipient(Message.RecipientType.TO,
                     new InternetAddress(to));
-            msg.setSubject("BookmyFlight Confirmation: Ticket Booked");
+//            msg.setSubject("BookmyFlight Confirmation: Ticket Booked");
+            msg.setSubject(subMsg);
             msg.setText(msgBody);
             Transport.send(msg);
             Alert alert = new Alert(Alert.AlertType.INFORMATION);

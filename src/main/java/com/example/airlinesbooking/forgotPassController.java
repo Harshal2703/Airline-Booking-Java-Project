@@ -53,7 +53,7 @@ public class forgotPassController {
               if (email.equals(fgp_email.getText())){
                   otp = new String(generateOtp.OTP(7));
                   String msg = "Your Otp is "+ otp;
-                  sendMail.send_Mail(email,msg);
+                  sendMail.send_Mail(email,msg , "BookMyFlight : Forgot Password");
                   fgp_label.setVisible(true);
                   fgp_otp.setVisible(true);
                   fgp_validateOTP.setVisible(true);
